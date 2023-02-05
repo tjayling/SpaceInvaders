@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0187a59e-37dd-44ad-87db-b000a0688be3" name="Changes" comment="init">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SpaceInvaders.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/levels/Level.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/levels/level1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/spaceinvaders/AlienFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/spaceinvaders/Board.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/spaceinvaders/HitObserver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/spaceinvaders/SpaceInvaders.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/spaceinvaders/movers/Bullet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/spaceinvaders/movers/Drawable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/spaceinvaders/movers/Explosion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/spaceinvaders/movers/Mover.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/spaceinvaders/movers/Player.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/spaceinvaders/movers/aliens/Alien.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/spaceinvaders/movers/aliens/Direction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/spaceinvaders/movers/aliens/LargeAlien.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/spaceinvaders/movers/aliens/MediumAlien.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/spaceinvaders/movers/aliens/SmallAlien.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="Enum" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="sbwxpsie" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2LFMY0iiY3SmEt9gTEjcS5QyKXX" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="spaceinvaders.movers.aliens" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/assets/aliens" />
+      <recent name="$PROJECT_DIR$/src/assets/bullets" />
+      <recent name="$PROJECT_DIR$/src/assets" />
+      <recent name="$PROJECT_DIR$/assets" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="SpaceInvaders" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="spaceinvaders.SpaceInvaders" />
+      <module name="SpaceInvaders" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="spaceinvaders.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.SpaceInvaders" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0187a59e-37dd-44ad-87db-b000a0688be3" name="Changes" comment="" />
+      <created>1675462423361</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1675462423361</updated>
+      <workItem from="1675462424786" duration="35817000" />
+      <workItem from="1675612024998" duration="5738000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="init" />
+    <option name="LAST_COMMIT_MESSAGE" value="init" />
+  </component>
+</project>
