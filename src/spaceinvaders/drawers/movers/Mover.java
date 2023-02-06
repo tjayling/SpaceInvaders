@@ -1,4 +1,6 @@
-package spaceinvaders.movers;
+package spaceinvaders.drawers.movers;
+
+import spaceinvaders.drawers.Drawable;
 
 import java.awt.*;
 

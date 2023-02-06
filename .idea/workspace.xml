@@ -4,8 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0187a59e-37dd-44ad-87db-b000a0688be3" name="Changes" comment="Added images">
-      <change afterPath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" afterDir="false" />
+    <list default="true" id="0187a59e-37dd-44ad-87db-b000a0688be3" name="Changes" comment="config">
+      <change afterPath="$PROJECT_DIR$/src/spaceinvaders/BulletFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/spaceinvaders/Constants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/spaceinvaders/drawers/Heart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/spaceinvaders/drawers/movers/aliens/LargeAlien.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/spaceinvaders/drawers/movers/bullets/AlienBullet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/spaceinvaders/drawers/movers/bullets/LargeBullet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/spaceinvaders/drawers/movers/bullets/MediumBullet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/spaceinvaders/drawers/movers/bullets/SmallBullet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/aliens/alien-3-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/aliens/alien-large-1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/aliens/alien-3-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/aliens/alien-large-2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/levels/level1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/levels/level1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/spaceinvaders/AlienFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/spaceinvaders/AlienFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/spaceinvaders/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/spaceinvaders/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/spaceinvaders/HitObserver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/spaceinvaders/HitObserver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/spaceinvaders/movers/Bullet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/spaceinvaders/drawers/movers/bullets/PlayerBullet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/spaceinvaders/movers/Drawable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/spaceinvaders/drawers/Drawable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/spaceinvaders/movers/Explosion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/spaceinvaders/drawers/movers/Explosion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/spaceinvaders/movers/Mover.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/spaceinvaders/drawers/movers/Mover.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/spaceinvaders/movers/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/spaceinvaders/drawers/movers/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/spaceinvaders/movers/aliens/Alien.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/spaceinvaders/drawers/movers/aliens/Alien.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/spaceinvaders/movers/aliens/Direction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/spaceinvaders/drawers/movers/aliens/Direction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/spaceinvaders/movers/aliens/LargeAlien.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/spaceinvaders/movers/aliens/MediumAlien.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/spaceinvaders/drawers/movers/aliens/MediumAlien.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/spaceinvaders/movers/aliens/SmallAlien.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/spaceinvaders/drawers/movers/aliens/SmallAlien.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +40,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -52,6 +76,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="spaceinvaders" />
       <recent name="spaceinvaders.movers.aliens" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -60,6 +85,9 @@
       <recent name="$PROJECT_DIR$/src/assets" />
       <recent name="$PROJECT_DIR$/assets" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="spaceinvaders.drawers" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="SpaceInvaders" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -67,7 +95,7 @@
       <module name="SpaceInvaders" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="spaceinvaders.*" />
+          <option name="PATTERN" value="spaceinvaders.drawers.movers.bullets.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -90,7 +118,7 @@
       <option name="presentableId" value="Default" />
       <updated>1675462423361</updated>
       <workItem from="1675462424786" duration="35817000" />
-      <workItem from="1675612024998" duration="6079000" />
+      <workItem from="1675612024998" duration="15215000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1675619123736</created>
@@ -106,7 +134,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675619137332</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="config">
+      <created>1675619217720</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1675619217720</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -115,6 +150,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
     <MESSAGE value="Added images" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added images" />
+    <MESSAGE value="config" />
+    <option name="LAST_COMMIT_MESSAGE" value="config" />
   </component>
 </project>

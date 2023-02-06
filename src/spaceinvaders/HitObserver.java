@@ -1,7 +1,7 @@
 package spaceinvaders;
 
-import spaceinvaders.movers.Bullet;
-import spaceinvaders.movers.Mover;
+import spaceinvaders.drawers.movers.bullets.PlayerBullet;
+import spaceinvaders.drawers.movers.Mover;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,8 +18,8 @@ public class HitObserver {
 
     public static void alert() {
         for (Mover listener : listeners) {
-            if (listener.getClass() == Bullet.class ) {
-                ((Bullet) listener).destroy();
+            if (listener.getClass() == PlayerBullet.class ) {
+                ((PlayerBullet) listener).destroy();
             }
         }
     }

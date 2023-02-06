@@ -1,4 +1,4 @@
-package spaceinvaders.movers.aliens;
+package spaceinvaders.drawers.movers.aliens;
 
 import javax.swing.*;
 import java.awt.*;

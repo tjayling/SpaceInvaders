@@ -1,10 +1,9 @@
 package spaceinvaders;
 
-import spaceinvaders.movers.Bullet;
-import spaceinvaders.movers.Mover;
-import spaceinvaders.movers.Player;
-import spaceinvaders.movers.aliens.Alien;
-import spaceinvaders.movers.aliens.MediumAlien;
+import spaceinvaders.drawers.movers.Mover;
+import spaceinvaders.drawers.movers.Player;
+import spaceinvaders.drawers.movers.aliens.Alien;
+import spaceinvaders.drawers.movers.bullets.PlayerBullet;
 
 import javax.swing.*;
 import java.awt.*;
@@ -18,21 +17,22 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import static spaceinvaders.Constants.SCREEN_HEIGHT;
+import static spaceinvaders.Constants.SCREEN_WIDTH;
+
 public class Board extends JPanel implements ActionListener {
-    public static final int WIDTH = 1000;
-    public static final int HEIGHT = 600;
     private final Timer timer = new Timer(30, this);
+    private final List<Alien> enemies = new ArrayList<>();
     private java.util.List<Mover> movers;
     private boolean gameRunning = false;
     private Player player;
-    private final List<Alien> enemies = new ArrayList<>();
 
     public Board() {
         initBoard();
     }
 
     public void initBoard() {
-        setPreferredSize(new Dimension(WIDTH, HEIGHT));
+        setPreferredSize(new Dimension(SCREEN_WIDTH, SCREEN_HEIGHT));
         setVisible(true);
         setFocusable(true);
         setBackground(Color.black);
@@ -68,8 +68,7 @@ public class Board extends JPanel implements ActionListener {
     }
 
     public void checkCollisions() {
-        final Bullet playerBullet = player.getBullet();
-
+        final PlayerBullet playerBullet = player.getBullet();
         if (playerBullet != null) {
             for (Alien alien : enemies) {
                 alien.checkCollision(playerBullet);
@@ -83,10 +82,8 @@ public class Board extends JPanel implements ActionListener {
             for (Mover mover : movers) {
                 if (mover != null) {
                     mover.setup();
-                    if (mover.getClass() == MediumAlien.class) {
-                        if (mover.isDestroyable()) {
-                            toBeDestroyed.add(mover);
-                        }
+                    if (mover.isDestroyable()) {
+                        toBeDestroyed.add(mover);
                     }
                 }
             }

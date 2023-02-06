@@ -1,4 +1,6 @@
-package spaceinvaders.movers;
+package spaceinvaders.drawers.movers;
+
+import spaceinvaders.drawers.Drawable;
 
 import javax.swing.*;
 import java.awt.*;
@@ -20,7 +22,7 @@ public class Explosion extends Drawable {
 
     public void setup() {
         Image image2 = new ImageIcon("src/assets/explosion-2.png").getImage();
-        age += 1;
+        age++;
         if (age == 5) {
             setImage(image2);
         }

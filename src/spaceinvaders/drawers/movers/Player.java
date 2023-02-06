@@ -1,20 +1,21 @@
-package spaceinvaders.movers;
+package spaceinvaders.drawers.movers;
 
-import spaceinvaders.Board;
 import spaceinvaders.HitObserver;
+import spaceinvaders.drawers.movers.bullets.PlayerBullet;
 
 import javax.swing.*;
 import java.awt.*;
+
+import static spaceinvaders.Constants.*;
 
 
 public class Player extends Mover {
     private static final int WIDTH = 75;
     private static final int HEIGHT = 75;
-    private static final int STARTING_X = Board.WIDTH / 2;
-    private static final int STARTING_Y = Board.HEIGHT - (HEIGHT / 2);
-    private static final int SPEED = 25;
+    private static final int STARTING_X = SCREEN_WIDTH / 2;
+    private static final int STARTING_Y = SCREEN_HEIGHT - (HEIGHT / 2);
     private static Player player;
-    private Bullet bullet;
+    private PlayerBullet playerBullet;
     private boolean movingLeft;
     private boolean movingRight;
     private boolean shooting;
@@ -31,8 +32,8 @@ public class Player extends Mover {
         return player;
     }
 
-    public Bullet getBullet() {
-        return bullet;
+    public PlayerBullet getBullet() {
+        return playerBullet;
     }
 
     public void reset() {
@@ -41,20 +42,20 @@ public class Player extends Mover {
 
     public void shoot() {
         if (shooting) {
-            if (bullet == null) {
-                bullet = new Bullet(xPos, STARTING_Y - HEIGHT / 2);
-                HitObserver.subscribe(bullet);
+            if (playerBullet == null) {
+                playerBullet = new PlayerBullet(xPos, STARTING_Y - HEIGHT / 2);
+                HitObserver.subscribe(playerBullet);
             }
         }
     }
 
     @Override
     public void setup() {
-        if (bullet != null) {
-            bullet.setup();
-            if (bullet.isDestroyable()) {
-                HitObserver.unsubscribe(bullet);
-                bullet = null;
+        if (playerBullet != null) {
+            playerBullet.setup();
+            if (playerBullet.isDestroyable()) {
+                HitObserver.unsubscribe(playerBullet);
+                playerBullet = null;
             }
         }
         shoot();
@@ -63,28 +64,26 @@ public class Player extends Mover {
     @Override
     public void move() {
         if (movingLeft) {
-            if (xPos - SPEED >= WIDTH / 2) {
-                xPos -= SPEED;
+            if (xPos - BULLET_SPEED >= WIDTH / 2) {
+                xPos -= PLAYER_SPEED;
             }
         }
 
         if (movingRight) {
-            if (xPos + SPEED <= Board.WIDTH - (WIDTH / 2)) {
-                {
-                    xPos += SPEED;
-                }
+            if (xPos + BULLET_SPEED <= SCREEN_WIDTH - (WIDTH / 2)) {
+                xPos += PLAYER_SPEED;
             }
         }
-        if (bullet != null) {
-            bullet.move();
+        if (playerBullet != null) {
+            playerBullet.move();
         }
     }
 
     @Override
     public void draw(Graphics g) {
         super.draw(g);
-        if (bullet != null) {
-            bullet.draw(g);
+        if (playerBullet != null) {
+            playerBullet.draw(g);
         }
     }
 

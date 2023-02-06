@@ -1,20 +1,23 @@
-package spaceinvaders.movers.aliens;
+package spaceinvaders.drawers.movers.aliens;
 
+import spaceinvaders.BulletFactory;
 import spaceinvaders.HitObserver;
-import spaceinvaders.movers.Bullet;
-import spaceinvaders.movers.Explosion;
-import spaceinvaders.movers.Mover;
+import spaceinvaders.drawers.movers.Explosion;
+import spaceinvaders.drawers.movers.Mover;
+import spaceinvaders.drawers.movers.bullets.AlienBullet;
+import spaceinvaders.drawers.movers.bullets.PlayerBullet;
 
 import java.awt.*;
+import java.util.Random;
 
-import static spaceinvaders.movers.aliens.Direction.LEFT;
-import static spaceinvaders.movers.aliens.Direction.RIGHT;
+import static spaceinvaders.drawers.movers.aliens.Direction.LEFT;
+import static spaceinvaders.drawers.movers.aliens.Direction.RIGHT;
 
 public abstract class Alien extends Mover {
     private final int WIDTH = 50;
     private final int HEIGHT = 50;
+    protected AlienBullet bullet;
     private Explosion explosion;
-    private boolean destroyable = false;
     private boolean visible = true;
     private int age = 0;
     private Image image1;
@@ -31,7 +34,7 @@ public abstract class Alien extends Mover {
     }
 
 
-    public void checkCollision(Bullet playerBullet) {
+    public void checkCollision(PlayerBullet playerBullet) {
         if (visible) {
             final int pX = playerBullet.getxPos();
             final int pY = playerBullet.getyPos();
@@ -43,22 +46,42 @@ public abstract class Alien extends Mover {
         }
     }
 
+    public void shoot() {
+        if (bullet == null) {
+            bullet = BulletFactory.createBullet(this);
+        }
+    }
+
     @Override
     public void setup() {
-        age += 1;
+        age++;
+
+        if (age > 50) {
+            if (new Random().nextDouble() < 0.001) {
+                shoot();
+            }
+        }
+
         if (explosion != null) {
             explosion.setup();
             if (explosion.isDestroyable()) {
                 explosion = null;
-                destroyable = true;
+                setDestroyable(true);
             }
         }
-        if (age % 30 == 15) {
-            setImage(image2);
-            return;
-        }
-        if (age % 30 == 0) {
+
+        if (image != image1 && age % 30 < 15) {
             setImage(image1);
+        }
+        if (image != image2 && age % 30 >= 15) {
+            setImage(image2);
+        }
+
+        if (bullet != null) {
+            bullet.setup();
+            if (bullet.isDestroyable()) {
+                bullet = null;
+            }
         }
     }
 
@@ -75,10 +98,16 @@ public abstract class Alien extends Mover {
         if (age > 0 && age % 100 == 0) {
             yPos += 10;
         }
+        if (bullet != null) {
+            bullet.move();
+        }
     }
 
     @Override
     public void draw(Graphics g) {
+        if (bullet != null) {
+            bullet.draw(g);
+        }
         if (visible) {
             super.draw(g);
             return;
@@ -86,10 +115,5 @@ public abstract class Alien extends Mover {
         if (explosion != null) {
             explosion.draw(g);
         }
-    }
-
-    @Override
-    public boolean isDestroyable() {
-        return destroyable;
     }
 }

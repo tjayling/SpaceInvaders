@@ -1,13 +1,16 @@
-package spaceinvaders.movers;
+package spaceinvaders.drawers.movers.bullets;
+
+import spaceinvaders.drawers.movers.Mover;
 
 import javax.swing.*;
 
-public class Bullet extends Mover {
+import static spaceinvaders.Constants.BULLET_SPEED;
+
+public class PlayerBullet extends Mover {
     private static final int WIDTH = 5;
     private static final int HEIGHT = 50;
-    private static final int SPEED = 30;
 
-    public Bullet(int xPos, int yPos) {
+    public PlayerBullet(int xPos, int yPos) {
         super(xPos, yPos, 75, 50);
         setImage(new ImageIcon("src/assets/bullets/bullet.png").getImage());
     }
@@ -25,6 +28,6 @@ public class Bullet extends Mover {
 
     @Override
     public void move() {
-        yPos -= SPEED;
+        yPos -= BULLET_SPEED;
     }
 }
