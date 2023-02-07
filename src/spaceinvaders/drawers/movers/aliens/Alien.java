@@ -1,7 +1,7 @@
 package spaceinvaders.drawers.movers.aliens;
 
-import spaceinvaders.BulletFactory;
-import spaceinvaders.HitObserver;
+import spaceinvaders.factories.BulletFactory;
+import spaceinvaders.observers.HitObserver;
 import spaceinvaders.drawers.movers.Explosion;
 import spaceinvaders.drawers.movers.Mover;
 import spaceinvaders.drawers.movers.bullets.AlienBullet;
@@ -33,12 +33,11 @@ public abstract class Alien extends Mover {
         this.image2 = image2;
     }
 
-
     public void checkCollision(PlayerBullet playerBullet) {
         if (visible) {
             final int pX = playerBullet.getxPos();
             final int pY = playerBullet.getyPos();
-            if (pX < (xPos + (WIDTH / 2)) && pX > (xPos - (WIDTH / 2)) && pY < (yPos + (HEIGHT / 2)) && pY > (yPos - (HEIGHT / 2))) {
+            if (pX <= (xPos + (WIDTH / 2)) && pX >= (xPos - (WIDTH / 2)) && pY <= (yPos + (HEIGHT / 2)) && pY >= (yPos - (HEIGHT / 2))) {
                 visible = false;
                 explosion = new Explosion(xPos, yPos);
                 HitObserver.alert();
@@ -115,5 +114,9 @@ public abstract class Alien extends Mover {
         if (explosion != null) {
             explosion.draw(g);
         }
+    }
+
+    public AlienBullet getBullet() {
+        return bullet;
     }
 }

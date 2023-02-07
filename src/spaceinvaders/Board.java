@@ -1,9 +1,12 @@
 package spaceinvaders;
 
+import spaceinvaders.drawers.HealthBar;
 import spaceinvaders.drawers.movers.Mover;
 import spaceinvaders.drawers.movers.Player;
 import spaceinvaders.drawers.movers.aliens.Alien;
 import spaceinvaders.drawers.movers.bullets.PlayerBullet;
+import spaceinvaders.factories.AlienFactory;
+import spaceinvaders.observers.PlayerHitObserver;
 
 import javax.swing.*;
 import java.awt.*;
@@ -22,7 +25,7 @@ import static spaceinvaders.Constants.SCREEN_WIDTH;
 
 public class Board extends JPanel implements ActionListener {
     private final Timer timer = new Timer(30, this);
-    private final List<Alien> enemies = new ArrayList<>();
+    private static final List<Alien> aliens = new ArrayList<>();
     private java.util.List<Mover> movers;
     private boolean gameRunning = false;
     private Player player;
@@ -55,14 +58,14 @@ public class Board extends JPanel implements ActionListener {
             Scanner scanner = new Scanner(file);
             while (scanner.hasNextLine()) {
                 String[] data = scanner.nextLine().split(",");
-                enemies.add(AlienFactory.createAlien(data[0], Integer.parseInt(data[1]), Integer.parseInt(data[2])));
+                aliens.add(AlienFactory.createAlien(data[0], Integer.parseInt(data[1]), Integer.parseInt(data[2])));
             }
             scanner.close();
         } catch (FileNotFoundException e) {
             throw new RuntimeException("can't load level 1");
         }
 
-        movers.addAll(enemies);
+        movers.addAll(aliens);
 
         gameRunning = true;
     }
@@ -70,7 +73,7 @@ public class Board extends JPanel implements ActionListener {
     public void checkCollisions() {
         final PlayerBullet playerBullet = player.getBullet();
         if (playerBullet != null) {
-            for (Alien alien : enemies) {
+            for (Alien alien : aliens) {
                 alien.checkCollision(playerBullet);
             }
         }
@@ -159,5 +162,9 @@ public class Board extends JPanel implements ActionListener {
                 gameRunning = false;
             }
         }
+    }
+
+    public static List<Alien> getAliens() {
+        return aliens;
     }
 }

@@ -14,11 +14,11 @@ public class SmallBullet extends AlienBullet {
     @Override
     public void setup() {
         super.setup();
-        if (image != image1 && age % 30 < 15) {
+        if (image != image1 && age % 4 < 2) {
             setImage(image1);
             return;
         }
-        if (image != image2 && age % 30 >= 15) {
+        if (image != image2 && age % 4 >= 2) {
             setImage(image2);
         }
     }

@@ -1,4 +1,4 @@
-package spaceinvaders;
+package spaceinvaders.factories;
 
 import spaceinvaders.drawers.movers.aliens.Alien;
 import spaceinvaders.drawers.movers.aliens.LargeAlien;
